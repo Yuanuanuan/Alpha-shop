@@ -1,15 +1,22 @@
-import { useContext } from 'react';
-import { FormContext } from './FormContext';
+import { useContext } from "react";
+import { FormContext } from "./FormContext";
 
-function Step2 () {
-  const { formData, updateFormData } = useContext(FormContext)
+function Step2() {
+  const { formData, updateFormData } = useContext(FormContext);
 
   return (
     <form className="col col-12" data-phase="shipping">
       <h3 className="form-title">運送方式</h3>
       <section className="form-body col col-12">
         <label className="radio-group col col-12" data-price="0">
-          <input id="shipping-standard" type="radio" name="shipping" checked={formData.shipping === '標準運送'} value={formData.shipping} onChange={(e) => updateFormData('shipping', '標準運送')}/>
+          <input
+            id="shipping-standard"
+            type="radio"
+            name="shipping"
+            checked={formData.shipping === "標準運送"}
+            value={formData.shipping}
+            onChange={(e) => updateFormData("shipping", "標準運送")}
+          />
           <div className="radio-info">
             <div className="col col-12">
               <div className="text">標準運送</div>
@@ -20,7 +27,14 @@ function Step2 () {
           <div className="radio-box-border"></div>
         </label>
         <label className="radio-group col col-12" data-price="500">
-          <input id="shipping-dhl" type="radio" name="shipping" checked={formData.shipping === 'DHL 貨運'} value={formData.shipping} onChange={(e) => updateFormData('shipping', 'DHL 貨運')} />
+          <input
+            id="shipping-dhl"
+            type="radio"
+            name="shipping"
+            checked={formData.shipping === "DHL 貨運"}
+            value={formData.shipping}
+            onChange={(e) => updateFormData("shipping", "DHL 貨運")}
+          />
           <div className="radio-info">
             <div className="col col-12">
               <div className="text">DHL 貨運</div>

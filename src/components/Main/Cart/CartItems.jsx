@@ -46,9 +46,10 @@ const CartItems = () => {
 
   return (
     <>
-      {cartItems && cartItems.map((cartItem) => (
-        <CartItem {...cartItem} key={cartItem.id} />
-      ))}
+      {cartItems &&
+        cartItems.map((cartItem) => (
+          <CartItem {...cartItem} key={cartItem.id} />
+        ))}
     </>
   );
 };
